@@ -33,9 +33,9 @@ Scenario: validate registration form input field phone numbers
 	Then I click to edit user credentials button
 	And I validate all user filled information
 
-#BUG
+#BUG-03
 @positive
-Scenario: validate registration form input field phone is mandatory
+Scenario: validate registration form input field phone is not mandatory
 	Then I enter registration details
 	| Name | Surname     | Email                | Phone |
 	| Dima | Shchepetkov | schepetkov@gmail.com |       |

@@ -11,6 +11,7 @@
     using PlaywrightTests.WebDriver;
     using TechTalk.SpecFlow;
     using TechTalk.SpecFlow.Assist;
+    using static System.Runtime.InteropServices.JavaScript.JSType;
 
     [Binding]
     public class SinglePageApplicationValidationSteps
@@ -94,6 +95,7 @@
                 if (field.Surname != null)
                 {
                     await this.registrationFormPage.FillFormByLocatorName(RegistrationFormPage.Surname, field.Surname);
+                    this.scenarioContext.Set<bool>(this.registrationFormPage.IsDataContainSpecialCharacters(field.Surname), HomePage.SpecialCharactersKey);
                 }
 
                 if (field.Email != null)
@@ -106,9 +108,10 @@
                     await this.registrationFormPage.FillFormByLocatorName(RegistrationFormPage.Phone, field.Phone);
                 }
 
+                bool bDataContainSpecial = this.scenarioContext.Get<bool>(HomePage.SpecialCharactersKey);
                 RegistrationForm newUserCredentials = new RegistrationForm();
                 newUserCredentials.Name = field.Name;
-                newUserCredentials.Surname = field.Surname;
+                newUserCredentials.Surname = bDataContainSpecial ? BasePage.SpecialCharactersSet : field.Surname;
                 newUserCredentials.Email = field.Email;
                 newUserCredentials.Phone = field.Phone;
 

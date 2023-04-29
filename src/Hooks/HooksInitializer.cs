@@ -11,13 +11,15 @@ namespace PlaywrightTests.Hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
-            // do all what you need before test start
+            // TODO: execute command via WPS
+            // docker run -it -p 3000:3000 qa-sandbox
         }
 
         [AfterScenario]
         public void AfterScenario()
         {
-            // call after test will finished
+            // TODO: execute command via WPS
+            // docker stop <container name>
         }
     }
 }

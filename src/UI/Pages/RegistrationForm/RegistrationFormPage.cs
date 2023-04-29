@@ -23,7 +23,14 @@
 
         public async Task FillFormByLocatorName(string name, string date)
         {
-            await this.GetPage().Locator($"#{name}").FillAsync(date);
+            if (date == SpecialCharactersKey)
+            {
+                await this.GetPage().Locator($"#{name}").FillAsync(BasePage.SpecialCharactersSet);
+            }
+            else
+            {
+                await this.GetPage().Locator($"#{name}").FillAsync(date);
+            }
         }
 
         public async Task ValidateInputFieldDataByName(string name, string date)

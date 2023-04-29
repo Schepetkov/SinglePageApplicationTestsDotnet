@@ -10,7 +10,10 @@
 
         public BasePage(IPage page) => this.page = page;
 
-        public static string EnterButtonName => "Enter";
+        // data table in SpecFlow not support this
+        public static string SpecialCharactersSet => " ~!@#$%^&*()_+{}|:\"<>?`-=[];',./";
+
+        public static string SpecialCharactersKey => "SpecialCharactersKey";
 
         public static void StopTestWithReason(string reason)
         {
@@ -19,6 +22,11 @@
         }
 
         public IPage GetPage() => this.page;
+
+        public bool IsDataContainSpecialCharacters(string data)
+        {
+            return data == SpecialCharactersKey;
+        }
 
         public async Task ClickToButtonByName(string buttonName)
         {

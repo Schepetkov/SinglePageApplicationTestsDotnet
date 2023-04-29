@@ -21,8 +21,9 @@
 
             this.browser = await playwright.Chromium.LaunchAsync(new ()
             {
-                //Headless = false,
-                //SlowMo = 100,
+                // delete comment if you want to observe how the test executes scenarios
+                // Headless = false,
+                // SlowMo = 100,
             });
 
             return await this.browser.NewPageAsync();

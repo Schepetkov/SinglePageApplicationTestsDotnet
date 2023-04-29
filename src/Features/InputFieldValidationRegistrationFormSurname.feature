@@ -37,3 +37,12 @@ Scenario: validate registration form input field surname is mandatory
 	| Dima |         | schepetkov@gmail.com | +31 6 13 96 82 15 |
 	And I click to button by name 'Submit'
 	Then I validate registration form input field should be mandatory by name 'surname'
+
+#SpecialCharactersKey= ~!@#$%^&*()_+{}|:\"<>?`-=[];',./
+@negative
+Scenario: validate registration form input field surname with special characters
+	Then I enter registration details
+	| Name | Surname              | Email                | Phone             |
+	| Dima | SpecialCharactersKey | schepetkov@gmail.com | +31 6 13 96 82 15 |
+	And I click to button by name 'Submit'
+	Then I validate user details without phone

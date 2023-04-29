@@ -72,3 +72,12 @@ Scenario: validate registration form input field email contain all special chara
 	| Dima | Shchepetkov | Shchepetkov@ | +31 6 13 96 82 15 |
 	And I click to button by name 'Submit'
 	Then I validate registration form input field email has validation message
+
+@positive
+# special characters: '@.'
+Scenario: validate registration form input field email contain all special characters, but unfinished
+	Then I enter registration details
+	| Name | Surname     | Email         | Phone             |
+	| Dima | Shchepetkov | Shchepetkov@. | +31 6 13 96 82 15 |
+	And I click to button by name 'Submit'
+	Then I validate registration form input field email has validation message

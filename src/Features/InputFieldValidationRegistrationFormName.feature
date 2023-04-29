@@ -22,9 +22,9 @@ Scenario: validate registration form input field name all alphabet uppercase tex
 	And I click to button by name 'Submit'
 	Then I validate user details without phone
 
-#BUG
+#BUG-02
 @positive
-Scenario: validate registration form input field name is mandatory
+Scenario: validate registration form input field name is not mandatory
 	Then I enter registration details
 	| Name | Surname     | Email                | Phone             |
 	|      | Shchepetkov | schepetkov@gmail.com | +31 6 13 96 82 15 |
