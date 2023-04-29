@@ -4,7 +4,7 @@
 
 ```bash
 Reproduction steps:
-click to main menu link button by type 'NewRegistration'
+click to 'New registration' link button
 ```
 ```bash
 Actual behavior:
@@ -19,7 +19,7 @@ all input fields should look user-friendly and be align
 ## BUG-02
 ```bash
 Reproduction steps:
-click to main menu link button by type 'NewRegistration'
+click to 'New registration' link button
 enter registration details without name
 	| Name | Surname     | Email                | Phone             |
 	|      | Shchepetkov | schepetkov@gmail.com | +31 6 13 96 82 15 |
@@ -38,7 +38,7 @@ input field name should be optional, accordantly field requirements
 ## BUG-03
 ```bash
 Reproduction steps:
-click to main menu link button by type 'NewRegistration'
+click to 'New registration' link button
 enter registration details
 	| Name | Surname     | Email                | Phone |
 	| Dima | Shchepetkov | schepetkov@gmail.com |       |
@@ -52,12 +52,12 @@ input field phone is mandatory
 
 ```bash
 Expected behavior:
-Input field phone should be optional, accordantly field requirements.
+input field phone should be optional, accordantly field requirements
 ```
 ## BUG-04
 ```bash
 Reproduction steps:
-click to main menu link button by type 'NewRegistration'
+click to 'New registration' link button
 enter registration details
 	| Name | Surname     | Email                | Phone             |
 	| Dima | Shchepetkov | schepetkov@gmail.com | +31 6 13 96 82 15 |
@@ -71,12 +71,12 @@ phone data is not present in overview section
 
 ```bash
 Expected behavior:
-All user-filled data should be present (unless it's part of the design, it's hard to say without access to the layout.)
+all user-filled data should be present (unless it's part of the design, it's hard to say without access to the layout)
 ```
 ## BUG-05
 ```bash
 Reproduction steps:
-click to main menu link button by type 'NewRegistration'
+click to 'New registration' link button
 enter registration details
 	| Name | Surname     | Email                | Phone             |
 	| Dima | Shchepetkov | schepetkov@gmail.com | +31 6 13 96 82 15 |
@@ -96,7 +96,7 @@ app should have validation before the user submit new data and avoid the opportu
 ## BUG-06 (minor)
 ```bash
 Reproduction steps:
-click to main menu link button by type 'NewRegistration'
+click to 'New registration' link button
 enter registration details
 	| Name | Surname     | Email                | Phone             |
 	| Dima | Shchepetkov | schepetkov@gmail.com | +31 6 13 96 82 15 |
@@ -117,7 +117,7 @@ keep symmetry and do not overlap
 ## BUG-07 (minor)
 ```bash
 Reproduction steps:
-click to main menu link button by type 'NewRegistration'
+click to 'New registration' link button
 ```
 ```bash
 Actual behavior:
