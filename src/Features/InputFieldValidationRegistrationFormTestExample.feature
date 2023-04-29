@@ -1,5 +1,5 @@
 ﻿Feature: InputFieldValidationRegistrationFormEditUserData
-Validate edit user data feature
+Test Set Example
 
 Background:
 Given I navigate to 'http://localhost:3000/qa-sandbox-spa'

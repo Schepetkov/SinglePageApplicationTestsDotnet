@@ -46,3 +46,24 @@ Scenario: validate registration form input field surname with special characters
 	| Dima | SpecialCharactersKey | schepetkov@gmail.com | +31 6 13 96 82 15 |
 	And I click to button by name 'Submit'
 	Then I validate user details without phone
+#TODO: added this behavior for all not supported characters:
+# single leading space
+# single trailing space
+# Leading and trailing spaces
+# etc.
+
+@negative
+Scenario: validate registration form input field surname with a many leading spaces
+	Then I enter registration details
+	| Name | Surname                | Email                | Phone             |
+	| Dima | Sh ch  epe t   k    ov | schepetkov@gmail.com | +31 6 13 96 82 15 |
+	And I click to button by name 'Submit'
+	Then I validate user details without phone
+
+@negative
+Scenario: validate registration form input field surname with nonprinting character
+	Then I enter registration details
+	| Name    | Surname                     | Email                | Phone      |
+	| <b></b> | -Sh-ch-epe-t-k-ov- <i> </i> | schepetkov@gmail.com | \\textbf{} |
+	And I click to button by name 'Submit'
+	Then I validate user details without phone
