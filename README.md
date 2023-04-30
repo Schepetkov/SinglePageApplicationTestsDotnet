@@ -130,7 +130,7 @@ change input fields names (on app or in doc)
 email - Contact email
 phone - Phone number
 ```
-## BUG-09 (automated)
+## BUG-08 (automated)
 ```bash
 Reproduction steps:
 click to 'New registration' link button
