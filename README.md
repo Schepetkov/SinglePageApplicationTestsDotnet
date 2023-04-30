@@ -1,7 +1,6 @@
 # Bug report
 
 ## BUG-01
-
 ```bash
 Reproduction steps:
 click to 'New registration' link button
@@ -16,7 +15,7 @@ all input fields are not aligned
 Expected behavior:
 all input fields should look user-friendly and be align
 ```
-## BUG-02
+## BUG-02 (automated)
 ```bash
 Reproduction steps:
 click to 'New registration' link button
@@ -35,11 +34,11 @@ input field name is mandatory
 Expected behavior:
 input field name should be optional, accordantly field requirements
 ```
-## BUG-03
+## BUG-03 (automated)
 ```bash
 Reproduction steps:
 click to 'New registration' link button
-enter registration details
+enter registration details without phone
 	| Name | Surname     | Email                | Phone |
 	| Dima | Shchepetkov | schepetkov@gmail.com |       |
 click to submit button
@@ -54,7 +53,7 @@ input field phone is mandatory
 Expected behavior:
 input field phone should be optional, accordantly field requirements
 ```
-## BUG-04
+## BUG-04 (automated)
 ```bash
 Reproduction steps:
 click to 'New registration' link button
@@ -73,7 +72,7 @@ phone data is not present in overview section
 Expected behavior:
 all user-filled data should be present (unless it's part of the design, it's hard to say without access to the layout)
 ```
-## BUG-05
+## BUG-05 (automated)
 ```bash
 Reproduction steps:
 click to 'New registration' link button
@@ -91,7 +90,7 @@ app allow to create two the same users
 
 ```bash
 Expected behavior:
-app should have validation before the user submit new data and avoid the opportunity to create two identical users
+application must validate user data before sending it to the server and avoid the opportunity to create two identical users
 ```
 ## BUG-06 (minor)
 ```bash
