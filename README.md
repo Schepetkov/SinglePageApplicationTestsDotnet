@@ -134,7 +134,7 @@ phone - Phone number
 ```bash
 Reproduction steps:
 click to 'New registration' link button
-enter registration details with with a large number of characters
+enter registration details with a large number of characters
 	| Name | Surname                                                                                                                                                                                                                                                                                                                                       | Email                | Phone             |
 	| Dima | 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 | schepetkov@gmail.com | +31 6 13 96 82 15 |
 click to submit button
@@ -143,7 +143,7 @@ click to submit button
 Actual behavior:
 user details layout is broken
 ```
-[click for more information](https://drive.google.com/file/d/1wBH8O0AKyveBl6FGP12Tr54tOXxYlypT/view?usp=share_link)
+[click for more information](https://drive.google.com/file/d/18uIgkiZWZ4uhSFhwO7wapKsiPnXDKxFY/view?usp=share_link)
 
 ```bash
 Expected behavior:
