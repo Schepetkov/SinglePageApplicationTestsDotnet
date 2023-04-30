@@ -130,5 +130,26 @@ change input fields names (on app or in doc)
 email - Contact email
 phone - Phone number
 ```
+## BUG-09 (automated)
+```bash
+Reproduction steps:
+click to 'New registration' link button
+enter registration details with with a large number of characters
+	| Name | Surname                                                                                                                                                                                                                                                                                                                                       | Email                | Phone             |
+	| Dima | 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 | schepetkov@gmail.com | +31 6 13 96 82 15 |
+click to submit button
+```
+```bash
+Actual behavior:
+user details layout is broken
+```
+[click for more information](https://drive.google.com/file/d/1wBH8O0AKyveBl6FGP12Tr54tOXxYlypT/view?usp=share_link)
+
+```bash
+Expected behavior:
+accordantly documentation is no character limit, but it should be
+layout should look user-friendly
+
+```
 # Test report
-[click for view test report](https://drive.google.com/file/d/1GQOF8lQLSl8G6Smd_1h9GPrQCeizfyoy/view?usp=share_link)
+[click for view test report](https://drive.google.com/file/d/1ykFsMpZzV0gxchCPjY5u8SeMmAkHt6Oy/view?usp=share_link)

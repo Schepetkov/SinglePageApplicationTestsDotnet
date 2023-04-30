@@ -10,7 +10,7 @@
 
         public BasePage(IPage page) => this.page = page;
 
-        // data table in SpecFlow not support this
+        // data table in SpecFlow not support this expression
         public static string SpecialCharactersSet => " ~!@#$%^&*()_+{}|:\"<>?`-=[];',./";
 
         public static string SpecialCharactersKey => "SpecialCharactersKey";

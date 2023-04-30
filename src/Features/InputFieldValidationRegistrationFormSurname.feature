@@ -42,6 +42,7 @@ Scenario: validate registration form input field surname is mandatory
 @negative
 Scenario: validate registration form input field surname with special characters
 	Then I enter registration details
+	#data table in SpecFlow not support this expression
 	| Name | Surname              | Email                | Phone             |
 	| Dima | SpecialCharactersKey | schepetkov@gmail.com | +31 6 13 96 82 15 |
 	And I click to button by name 'Submit'
@@ -73,5 +74,17 @@ Scenario: validate registration form input field surname with SQL Injection
 	Then I enter registration details
 	| Name | Surname                                        | Email                | Phone             |
 	| Dima | Select id from users where username=’username’ | schepetkov@gmail.com | +31 6 13 96 82 15 |
+	And I click to button by name 'Submit'
+	Then I validate user details without phone
+
+#BUG-08
+# TODO: test will always successful because no any limit 
+# redo check validation when bug will fix and form has validation message or has character limit behavior 
+@negative
+Scenario: validate registration form input field surname with maximum number of characters
+	Then I enter registration details
+	# there is no specific number in the documentation, I set random character length
+	| Name | Surname                                                                                                                                                                                                                                                                                                                                       | Email                | Phone             |
+	| Dima | 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 | schepetkov@gmail.com | +31 6 13 96 82 15 |
 	And I click to button by name 'Submit'
 	Then I validate user details without phone
