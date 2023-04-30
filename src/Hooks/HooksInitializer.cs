@@ -1,7 +1,7 @@
 ﻿using TechTalk.SpecFlow;
 using Xunit;
 
-[assembly: CollectionBehavior(MaxParallelThreads = 2)]
+[assembly: CollectionBehavior(MaxParallelThreads = 6)]
 
 namespace PlaywrightTests.Hooks
 {

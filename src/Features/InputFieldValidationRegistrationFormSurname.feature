@@ -63,7 +63,15 @@ Scenario: validate registration form input field surname with a many leading spa
 @negative
 Scenario: validate registration form input field surname with nonprinting character
 	Then I enter registration details
-	| Name    | Surname                     | Email                | Phone      |
-	| <b></b> | -Sh-ch-epe-t-k-ov- <i> </i> | schepetkov@gmail.com | \\textbf{} |
+	| Name | Surname                            | Email                | Phone             |
+	| Dima | <b></b>-Sh-ch-epe-t-k-ov- <i> </i> | schepetkov@gmail.com | +31 6 13 96 82 15 |
+	And I click to button by name 'Submit'
+	Then I validate user details without phone
+
+@negative
+Scenario: validate registration form input field surname with SQL Injection
+	Then I enter registration details
+	| Name | Surname                                        | Email                | Phone             |
+	| Dima | Select id from users where username=’username’ | schepetkov@gmail.com | +31 6 13 96 82 15 |
 	And I click to button by name 'Submit'
 	Then I validate user details without phone
