@@ -54,7 +54,7 @@
             }
             catch
             {
-                BasePage.StopTestWithReason($"ValidateEmailInputFiledValidateMessage::Input field 'email' has incorrect validation message or it doesn't show up at all");
+                BasePage.StopTestWithReason($"ValidateEmailInputFiledValidateMessage::Input field '{Email}' has incorrect validation message or it doesn't show up at all");
             }
         }
 

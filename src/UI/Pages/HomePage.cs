@@ -49,7 +49,7 @@
             }
             catch
             {
-                BasePage.StopTestWithReason($"ValidateEmptyGridMessage::Message {EmptyGridMessage} not present in overview");
+                BasePage.StopTestWithReason($"ValidateEmptyGridMessage::Message '{EmptyGridMessage}' not present in overview");
             }
         }
 
