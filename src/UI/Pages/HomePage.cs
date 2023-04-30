@@ -78,7 +78,7 @@
             }
             catch
             {
-                BasePage.StopTestWithReason($"ValidateUserCredentialsByFieldName::fieldName: {fieldName} not present in overview");
+                BasePage.StopTestWithReason($"ValidateUserCredentialsByFieldName::Data '{fieldName}' not present in overview details");
             }
         }
     }

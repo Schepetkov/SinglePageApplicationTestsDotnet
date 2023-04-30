@@ -41,7 +41,7 @@
             var inputFieldData = await inputField.EvaluateAsync<string>("el => el.value");
             if (inputFieldData != date)
             {
-                BasePage.StopTestWithReason($"ValidateInputFieldDataByName::Input field {name} has incorrect data: {inputFieldData}, should be: {date}");
+                BasePage.StopTestWithReason($"ValidateInputFieldDataByName::Input field '{name}' has incorrect data: {inputFieldData}, should be: {date}");
             }
         }
 
@@ -54,7 +54,7 @@
             }
             catch
             {
-                BasePage.StopTestWithReason($"ValidateEmailInputFiledValidateMessage::Input field email has incorrect validation message or it doesn't show up at all");
+                BasePage.StopTestWithReason($"ValidateEmailInputFiledValidateMessage::Input field 'email' has incorrect validation message or it doesn't show up at all");
             }
         }
 
@@ -70,7 +70,7 @@
                 }
                 catch
                 {
-                    BasePage.StopTestWithReason($"ValidateMandatoryFiledByName::Input field: {fieldName} has Required label, but it should not be mandatory field");
+                    BasePage.StopTestWithReason($"ValidateMandatoryFiledByName::Input field: '{fieldName}' has Required label, but it should not be mandatory field");
                 }
             }
             else
@@ -81,7 +81,7 @@
                 }
                 catch
                 {
-                    BasePage.StopTestWithReason($"ValidateMandatoryFiledByName::Input field: {fieldName} don't have Required label, it should be mandatory field");
+                    BasePage.StopTestWithReason($"ValidateMandatoryFiledByName::Input field: '{fieldName}' don't have Required label, it should be mandatory field");
                 }
             }
         }
